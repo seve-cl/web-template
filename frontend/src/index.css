@@ -1,0 +1,16 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Default fallback colors */
+  --color-primary: #ea580c;
+  --color-secondary: #1e293b;
+  --color-background: #ffffff;
+  --color-text: #0f172a;
+}
+
+body {
+  background-color: var(--color-background);
+  color: var(--color-text);
+}
