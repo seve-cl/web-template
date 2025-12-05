@@ -38,7 +38,8 @@ export const mockDB = {
                     precio: 8.99,
                     imagen: "/web-template/assets/pollo_clasico.jpg",
                     tags: ["popular", "clásico"],
-                    spicyLevel: 0
+                    spicyLevel: 0,
+                    activo: true
                 },
                 {
                     id: 102,
@@ -47,7 +48,8 @@ export const mockDB = {
                     precio: 24.99,
                     imagen: "/web-template/assets/combo_familiar.jpg",
                     tags: ["familiar", "compartir"],
-                    spicyLevel: 1
+                    spicyLevel: 1,
+                    activo: true
                 },
                 {
                     id: 103,
@@ -56,7 +58,8 @@ export const mockDB = {
                     precio: 9.99,
                     imagen: "/web-template/assets/alitas_picantes.png",
                     tags: ["picante", "entrante"],
-                    spicyLevel: 3
+                    spicyLevel: 3,
+                    activo: true
                 }
             ]
         },
@@ -71,7 +74,8 @@ export const mockDB = {
                     precio: 3.99,
                     imagen: "/web-template/assets/papas_fritas.png",
                     tags: ["vegetariano"],
-                    spicyLevel: 1
+                    spicyLevel: 1,
+                    activo: true
                 },
                 {
                     id: 202,
@@ -80,7 +84,8 @@ export const mockDB = {
                     precio: 1.99,
                     imagen: "/web-template/assets/salsa.png",
                     tags: ["extra"],
-                    spicyLevel: 0
+                    spicyLevel: 0,
+                    activo: true
                 },
                 {
                     id: 203,
@@ -89,7 +94,8 @@ export const mockDB = {
                     precio: 5.99,
                     imagen: "/web-template/assets/ensalada.png",
                     tags: ["vegetariano", "fresco"],
-                    spicyLevel: 0
+                    spicyLevel: 0,
+                    activo: true
                 }
             ]
         },
@@ -104,7 +110,8 @@ export const mockDB = {
                     precio: 2.99,
                     imagen: "/web-template/assets/bebida.png",
                     tags: ["bebida", "refrescante"],
-                    spicyLevel: 0
+                    spicyLevel: 0,
+                    activo: true
                 },
                 {
                     id: 302,
@@ -113,7 +120,8 @@ export const mockDB = {
                     precio: 4.99,
                     imagen: "/web-template/assets/postre.jpg",
                     tags: ["postre", "dulce"],
-                    spicyLevel: 0
+                    spicyLevel: 0,
+                    activo: true
                 }
             ]
         }
