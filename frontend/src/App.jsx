@@ -14,6 +14,7 @@ import AdminDashboard from './components/admin/AdminDashboard';
 import CartSidebar from './components/CartSidebar';
 import CartBottomBar from './components/CartBottomBar';
 import { CartProvider } from './context/CartContext';
+import { mockDB } from './data/mockDB';
 
 function App() {
   const [data, setData] = useState(null);
@@ -37,24 +38,39 @@ function App() {
 
     const fetchData = async () => {
       try {
+        // In production (GitHub Pages), we skip the API call and use mock data directly
+        if (import.meta.env.PROD) {
+          console.log("Running in production mode, using mock data");
+          setData(mockDB);
+          applyTheme(mockDB.configuracionRestaurante.colores);
+          setLoading(false);
+          return;
+        }
+
         const response = await fetch('http://localhost:3001/api/info');
         if (!response.ok) throw new Error('Error al conectar con el servidor');
         const result = await response.json();
         setData(result.data);
-
-        if (result.data.configuracionRestaurante?.colores) {
-          const { primario, secundario, fondo, texto } = result.data.configuracionRestaurante.colores;
-          const root = document.documentElement;
-          root.style.setProperty('--color-primary', primario);
-          root.style.setProperty('--color-secondary', secundario);
-          root.style.setProperty('--color-background', fondo);
-          root.style.setProperty('--color-text', texto);
-        }
+        applyTheme(result.data.configuracionRestaurante.colores);
       } catch (err) {
-        console.error("Error fetching data:", err);
-        setError(err.message);
+        console.log("API connection failed, falling back to mock data:", err);
+        // Fallback to mock data if API fails
+        setData(mockDB);
+        applyTheme(mockDB.configuracionRestaurante.colores);
+        setError(null); // Clear error since we have a fallback
       } finally {
         setLoading(false);
+      }
+    };
+
+    const applyTheme = (colores) => {
+      if (colores) {
+        const { primario, secundario, fondo, texto } = colores;
+        const root = document.documentElement;
+        root.style.setProperty('--color-primary', primario);
+        root.style.setProperty('--color-secondary', secundario);
+        root.style.setProperty('--color-background', fondo);
+        root.style.setProperty('--color-text', texto);
       }
     };
 
