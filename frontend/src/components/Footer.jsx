@@ -103,7 +103,7 @@ const Footer = ({ config }) => {
 
                 <div className="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
                     <p className="text-white/40 text-sm text-center md:text-left">
-                        &copy; {new Date().getFullYear()} {config.nombre}. Todos los derechos reservados.
+                        &copy; {new Date().getFullYear()} {config.nombre}. Todos los derechos reservados. <span className="opacity-50 text-xs ml-2">v1.1</span>
                     </p>
 
                     <button
