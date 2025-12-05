@@ -9,7 +9,7 @@ const AboutSection = () => {
                         <div className="absolute -top-4 -left-4 w-24 h-24 bg-primary/10 rounded-full z-0"></div>
                         <div className="absolute -bottom-4 -right-4 w-32 h-32 bg-secondary/10 rounded-full z-0"></div>
                         <img
-                            src="/web-template/assets/hero_banner.jpg"
+                            src="/web-template/assets/hero_banner.jpg?v=2"
                             alt="Nuestra Historia"
                             className="relative z-10 rounded-2xl shadow-2xl w-full object-cover h-[400px] transform hover:scale-[1.02] transition-transform duration-500"
                         />

@@ -3,7 +3,7 @@ export const mockDB = {
         id: 1,
         nombre: "Los Pollos Hermanos",
         logo: "/web-template/assets/pollos_logo.png",
-        banner: "/web-template/assets/hero_banner.jpg",
+        banner: "/web-template/assets/hero_banner.jpg?v=2",
         colores: {
             primario: "#F59E0B",
             secundario: "#D92626",
